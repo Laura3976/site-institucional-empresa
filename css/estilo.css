@@ -1,0 +1,40 @@
+:root{--noite:#141a33;--tinta:#0d1124;--ouro:#d4a94f;--marfim:#f3efe6;--cinza:#a9adc1;--erro:#ff8a7a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',Arial,sans-serif;background:var(--tinta);color:var(--marfim);line-height:1.65;font-size:1.05rem}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15}
+h1{font-size:clamp(2.2rem,6vw,3.8rem)}h2{font-size:2rem;margin-bottom:.8rem}h3{font-size:1.4rem;margin-bottom:.4rem}
+a{color:var(--ouro)}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+header{background:var(--noite);border-bottom:1px solid #2a3157;position:sticky;top:0;z-index:10}
+.barra{max-width:1000px;margin:auto;padding:.9rem 1.2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;color:var(--marfim);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:.3rem;flex-wrap:wrap}
+nav a{display:block;padding:.4rem .9rem;color:var(--cinza);text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover{color:var(--marfim);border-color:var(--cinza)}
+nav a.active{color:var(--ouro);border-color:var(--ouro)}
+main{max-width:1000px;margin:auto;padding:2.5rem 1.2rem}
+section{margin-bottom:3rem}
+.banner{background:var(--noite);border-left:4px solid var(--ouro);padding:3rem 1.5rem;margin-bottom:3rem;min-height:250px;position:relative}
+.slide{display:none}.slide.ativo{display:block;animation:entra .8s}
+.slide p{color:var(--cinza);margin-top:1rem;max-width:55ch}
+@keyframes entra{from{opacity:0}to{opacity:1}}
+.botao{display:inline-block;margin-top:1.5rem;background:var(--ouro);color:var(--tinta);padding:.7rem 1.4rem;border:0;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}
+.botao:hover{background:var(--marfim)}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.caixa{background:var(--noite);border-top:3px solid var(--ouro);padding:1.4rem}
+.caixa p{color:var(--cinza)}
+.lista-servicos .caixa{margin-bottom:1.2rem}
+.preco{color:var(--ouro);font-weight:700;margin-top:.6rem}
+form{display:grid;gap:1rem;max-width:520px}
+label{display:block;margin-bottom:.3rem}
+input,textarea{width:100%;padding:.7rem;background:var(--noite);border:1px solid #3a4275;color:var(--marfim);font:inherit}
+textarea{min-height:130px;resize:vertical}
+.erro{color:var(--erro);font-size:.9rem;min-height:1.2em}
+.sucesso{color:var(--ouro);font-weight:700}
+.dados{margin:1.5rem 0;color:var(--cinza)}
+footer{background:var(--noite);border-top:1px solid #2a3157;text-align:center;padding:1.5rem 1rem;color:var(--cinza);font-size:.9rem}
+#topo{position:fixed;right:1.2rem;bottom:1.2rem;width:46px;height:46px;background:var(--ouro);color:var(--tinta);border:0;font-size:1.3rem;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+#topo.visivel{opacity:1;pointer-events:auto}
+@media(max-width:700px){.grade{grid-template-columns:1fr}.barra{flex-direction:column;align-items:flex-start}.banner{padding:2rem 1rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
