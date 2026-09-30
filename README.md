@@ -1,10 +1,12 @@
-# Mente Aberta
+# Bureau Detalhe
 
-Site institucional de uma empresa fictícia de consultoria, workshops e apresentações de mentalismo, desenvolvido na disciplina de Web Frontend.
+Site institucional de uma agência fictícia de investigação e análise de comportamento, desenvolvido na disciplina de Web Frontend.
+
+Projeto de fã inspirado na série *O Mentalista*, sem vínculo oficial com a produção.
 
 ## Empresa
-- **Nome:** Mente Aberta
-- **Ramo de atuação:** desenvolvimento da observação e da comunicação, com workshops, consultoria e shows de mentalismo
+- **Nome:** Bureau Detalhe
+- **Ramo de atuação:** investigação de casos, análise de comportamento e treinamento de observação
 
 ## Aluna
 Laura Silvana Oliveira
