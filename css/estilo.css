@@ -392,3 +392,87 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==============================
+   MELHORIAS: DOSSIÊ
+   ============================== */
+
+/* imagem ao lado do texto */
+.destaque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.destaque img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border: 2px solid var(--tinta);
+  box-shadow: 8px 8px 0 var(--carimbo);
+}
+
+/* etapas numeradas */
+.etapas {
+  list-style: none;
+  counter-reset: etapa;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.etapas li {
+  counter-increment: etapa;
+  border-top: 4px solid var(--carimbo);
+  padding-top: 0.8rem;
+}
+
+.etapas li::before {
+  content: "0" counter(etapa);
+  display: block;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 2.2rem;
+  color: var(--carimbo);
+}
+
+.etapas strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.etapas span {
+  color: var(--suave);
+}
+
+/* fichas da equipe, estilo foto presa com fita */
+.ficha {
+  position: relative;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.ficha:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.ficha:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+.ficha::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 70px;
+  height: 20px;
+  margin-left: -35px;
+  background: rgba(168, 36, 28, 0.55);
+}
+
+@media (max-width: 700px) {
+  .destaque,
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+}
